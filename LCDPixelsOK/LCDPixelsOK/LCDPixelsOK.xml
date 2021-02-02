@@ -4,6 +4,28 @@
         <name>LCDPixelsOK</name>
     </assembly>
     <members>
+        <member name="M:LCDPixelsOK.ControlPanelForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LCDPixelsOK.ControlPanelForm"/> class.
+            </summary>
+        </member>
+        <member name="F:LCDPixelsOK.ControlPanelForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:LCDPixelsOK.MainForm">
             <summary>
             The main form of the application.

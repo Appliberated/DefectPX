@@ -1,15 +1,15 @@
 ﻿
 namespace LCDPixelsOK
 {
-    partial class MainForm
+    partial class ControlPanelForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -24,12 +24,12 @@ namespace LCDPixelsOK
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.colorButtonsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.blackButton = new System.Windows.Forms.Button();
@@ -38,36 +38,35 @@ namespace LCDPixelsOK
             this.greenButton = new System.Windows.Forms.Button();
             this.blueButton = new System.Windows.Forms.Button();
             this.customColorButton = new System.Windows.Forms.Button();
-            this.statusBarFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.statusBarTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.button3 = new System.Windows.Forms.Button();
+            this.mainTableLayoutPanel.SuspendLayout();
             this.colorButtonsFlowLayoutPanel.SuspendLayout();
-            this.statusBarFlowLayoutPanel.SuspendLayout();
+            this.statusBarTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // mainTableLayoutPanel
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.colorButtonsFlowLayoutPanel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.statusBarFlowLayoutPanel, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(202, 184);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 292);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.mainTableLayoutPanel.AutoSize = true;
+            this.mainTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainTableLayoutPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.mainTableLayoutPanel.ColumnCount = 1;
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainTableLayoutPanel.Controls.Add(this.label1, 0, 0);
+            this.mainTableLayoutPanel.Controls.Add(this.colorButtonsFlowLayoutPanel, 0, 1);
+            this.mainTableLayoutPanel.Controls.Add(this.statusBarTableLayoutPanel, 0, 2);
+            this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
+            this.mainTableLayoutPanel.RowCount = 3;
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(776, 296);
+            this.mainTableLayoutPanel.TabIndex = 1;
             // 
             // label1
             // 
@@ -194,42 +193,32 @@ namespace LCDPixelsOK
             this.customColorButton.Text = "Custom";
             this.customColorButton.UseVisualStyleBackColor = false;
             // 
-            // statusBarFlowLayoutPanel
+            // statusBarTableLayoutPanel
             // 
-            this.statusBarFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusBarFlowLayoutPanel.AutoSize = true;
-            this.statusBarFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.statusBarFlowLayoutPanel.BackColor = System.Drawing.Color.Black;
-            this.statusBarFlowLayoutPanel.Controls.Add(this.button1);
-            this.statusBarFlowLayoutPanel.Controls.Add(this.button2);
-            this.statusBarFlowLayoutPanel.Controls.Add(this.button3);
-            this.statusBarFlowLayoutPanel.Controls.Add(this.button4);
-            this.statusBarFlowLayoutPanel.Controls.Add(this.exitButton);
-            this.statusBarFlowLayoutPanel.Location = new System.Drawing.Point(0, 236);
-            this.statusBarFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.statusBarFlowLayoutPanel.Name = "statusBarFlowLayoutPanel";
-            this.statusBarFlowLayoutPanel.Size = new System.Drawing.Size(776, 56);
-            this.statusBarFlowLayoutPanel.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10);
-            this.button1.Size = new System.Drawing.Size(132, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "LCD PixelsOK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.statusBarTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusBarTableLayoutPanel.AutoSize = true;
+            this.statusBarTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.statusBarTableLayoutPanel.BackColor = System.Drawing.Color.Black;
+            this.statusBarTableLayoutPanel.ColumnCount = 4;
+            this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.statusBarTableLayoutPanel.Controls.Add(this.button2, 0, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.button1, 2, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.exitButton, 2, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.button3, 1, 0);
+            this.statusBarTableLayoutPanel.Location = new System.Drawing.Point(0, 236);
+            this.statusBarTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.statusBarTableLayoutPanel.Name = "statusBarTableLayoutPanel";
+            this.statusBarTableLayoutPanel.RowCount = 1;
+            this.statusBarTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statusBarTableLayoutPanel.Size = new System.Drawing.Size(776, 60);
+            this.statusBarTableLayoutPanel.TabIndex = 3;
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.AutoSize = true;
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -237,50 +226,37 @@ namespace LCDPixelsOK
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(141, 3);
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10);
-            this.button2.Size = new System.Drawing.Size(158, 50);
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.button2.Size = new System.Drawing.Size(194, 60);
             this.button2.TabIndex = 1;
             this.button2.Text = "🠈 Previous Color";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.AutoSize = true;
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(305, 3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10);
-            this.button3.Size = new System.Drawing.Size(132, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "🠊 Next Color";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(443, 3);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10);
-            this.button4.Size = new System.Drawing.Size(179, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "↩ Toggle This Panel";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(388, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.button1.Size = new System.Drawing.Size(194, 60);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Custom Color...";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // exitButton
             // 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.exitButton.AutoSize = true;
             this.exitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.exitButton.FlatAppearance.BorderSize = 0;
@@ -288,35 +264,57 @@ namespace LCDPixelsOK
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(628, 3);
-            this.exitButton.MinimumSize = new System.Drawing.Size(132, 0);
+            this.exitButton.Location = new System.Drawing.Point(582, 0);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(0);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Padding = new System.Windows.Forms.Padding(10);
-            this.exitButton.Size = new System.Drawing.Size(132, 50);
+            this.exitButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.exitButton.Size = new System.Drawing.Size(194, 60);
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // MainForm
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.AutoSize = true;
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(194, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.button3.Size = new System.Drawing.Size(194, 60);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "🠊 Next Color";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // ControlPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1241, 602);
-            this.ControlBox = false;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(887, 369);
+            this.Controls.Add(this.mainTableLayoutPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "ControlPanelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LCD PixelsOK";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlPanelForm_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlPanelForm_KeyDown);
+            this.mainTableLayoutPanel.ResumeLayout(false);
+            this.mainTableLayoutPanel.PerformLayout();
             this.colorButtonsFlowLayoutPanel.ResumeLayout(false);
-            this.statusBarFlowLayoutPanel.ResumeLayout(false);
-            this.statusBarFlowLayoutPanel.PerformLayout();
+            this.statusBarTableLayoutPanel.ResumeLayout(false);
+            this.statusBarTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,7 +322,7 @@ namespace LCDPixelsOK
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel colorButtonsFlowLayoutPanel;
         private System.Windows.Forms.Button blackButton;
@@ -333,12 +331,10 @@ namespace LCDPixelsOK
         private System.Windows.Forms.Button greenButton;
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Button customColorButton;
-        private System.Windows.Forms.FlowLayoutPanel statusBarFlowLayoutPanel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.TableLayoutPanel statusBarTableLayoutPanel;
+        private System.Windows.Forms.Button button1;
     }
 }
-
