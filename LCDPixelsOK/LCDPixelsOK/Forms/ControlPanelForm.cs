@@ -33,5 +33,10 @@
                 this.Hide();
             }
         }
+
+        private void ColorButtons_Click(object sender, System.EventArgs e)
+        {
+            (this.Owner as MainForm).ColorIndex = (sender as Button).TabIndex;
+        }
     }
 }

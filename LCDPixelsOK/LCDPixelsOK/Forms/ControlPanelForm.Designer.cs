@@ -117,6 +117,7 @@ namespace LCDPixelsOK
             this.blackButton.TabIndex = 0;
             this.blackButton.Text = "Black";
             this.blackButton.UseVisualStyleBackColor = false;
+            this.blackButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // whiteButton
             // 
@@ -132,6 +133,7 @@ namespace LCDPixelsOK
             this.whiteButton.TabIndex = 1;
             this.whiteButton.Text = "White";
             this.whiteButton.UseVisualStyleBackColor = false;
+            this.whiteButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // redButton
             // 
@@ -147,6 +149,7 @@ namespace LCDPixelsOK
             this.redButton.TabIndex = 2;
             this.redButton.Text = "Red";
             this.redButton.UseVisualStyleBackColor = false;
+            this.redButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // greenButton
             // 
@@ -162,6 +165,7 @@ namespace LCDPixelsOK
             this.greenButton.TabIndex = 3;
             this.greenButton.Text = "Green";
             this.greenButton.UseVisualStyleBackColor = false;
+            this.greenButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // blueButton
             // 
@@ -177,6 +181,7 @@ namespace LCDPixelsOK
             this.blueButton.TabIndex = 4;
             this.blueButton.Text = "Blue";
             this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // customColorButton
             // 
@@ -192,6 +197,7 @@ namespace LCDPixelsOK
             this.customColorButton.TabIndex = 5;
             this.customColorButton.Text = "Custom";
             this.customColorButton.UseVisualStyleBackColor = false;
+            this.customColorButton.Click += new System.EventHandler(this.ColorButtons_Click);
             // 
             // statusBarTableLayoutPanel
             // 

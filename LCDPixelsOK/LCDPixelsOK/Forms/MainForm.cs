@@ -5,6 +5,7 @@
 namespace LCDPixelsOK
 {
     using System;
+    using System.Drawing;
     using System.Windows.Forms;
 
     /// <summary>
@@ -12,6 +13,21 @@ namespace LCDPixelsOK
     /// </summary>
     public partial class MainForm : Form
     {
+
+        private static readonly Color[] Colors = { Color.Black, Color.White, Color.Red, Color.Lime, Color.Blue, Color.Orange };
+
+        private int colorIndex;
+
+        internal int ColorIndex
+        {
+            get => this.colorIndex;
+
+            set
+            {
+                this.colorIndex = value;
+                this.BackColor = Colors[this.colorIndex];
+            }
+        }
 
         private ControlPanelForm controlPanelForm;
 
