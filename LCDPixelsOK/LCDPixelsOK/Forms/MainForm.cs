@@ -120,5 +120,16 @@ namespace LCDPixelsOK
                 this.ColorIndex = 5;
             }
         }
+
+        private void MainForm_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Left: this.GotoNextColor(); break;
+                // case MouseButtons.Middle: this.ShowControlPanel(); break;
+                // case MouseButtons.Right: this.GotoNextColor(); break;
+                case MouseButtons.Right: this.ShowControlPanel(); break;
+            }
+        }
     }
 }

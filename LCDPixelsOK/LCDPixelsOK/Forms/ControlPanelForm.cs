@@ -1,5 +1,11 @@
-﻿namespace LCDPixelsOK
+﻿// <copyright file="ControlPanelForm.cs" company="Appliberated">
+// Copyright © Appliberated. All rights reserved.
+// </copyright>
+
+namespace LCDPixelsOK
 {
+    using System;
+    using System.Drawing;
     using System.Windows.Forms;
 
     public partial class ControlPanelForm : Form
@@ -35,6 +41,11 @@
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void ControlPanelForm_Load(object sender, System.EventArgs e)
+        {
+            this.UpdateCustomColor(this.MainForm.CustomColor);
+        }
+
         private void ExitButton_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
@@ -50,14 +61,9 @@
             this.colorDialog.Color = this.customColorButton.BackColor;
             if (this.colorDialog.ShowDialog(this) == DialogResult.OK)
             {
-                this.customColorButton.BackColor = this.colorDialog.Color;
+                this.UpdateCustomColor(this.colorDialog.Color);
                 this.MainForm.CustomColor = this.colorDialog.Color;
             }
-        }
-
-        private void ControlPanelForm_Load(object sender, System.EventArgs e)
-        {
-            this.customColorButton.BackColor = this.MainForm.CustomColor;
         }
 
         private void PreviousColorButton_Click(object sender, System.EventArgs e)
@@ -68,6 +74,13 @@
         private void NextColorButton_Click(object sender, System.EventArgs e)
         {
             this.MainForm.GotoNextColor();
+        }
+
+        private void UpdateCustomColor(Color color)
+        {
+            this.customColorButton.BackColor = color;
+            double pb = Math.Sqrt((color.R * color.R * .241) + (color.G * color.G * .691) + (color.B * color.B * .068));
+            this.customColorButton.ForeColor = (pb > 128) ? Color.Black : Color.White;
         }
     }
 }

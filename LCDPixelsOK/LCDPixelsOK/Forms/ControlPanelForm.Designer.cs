@@ -29,6 +29,7 @@ namespace LCDPixelsOK
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanelForm));
             this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.colorButtonsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -80,8 +81,7 @@ namespace LCDPixelsOK
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(713, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "To test for dead or stuck pixels, cycle throgh all the colors below and carefully" +
-    " inspect the screen for pixels that do not match the selected color:";
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // colorButtonsFlowLayoutPanel
             // 
@@ -142,7 +142,7 @@ namespace LCDPixelsOK
             this.redButton.FlatAppearance.BorderSize = 0;
             this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.redButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.redButton.ForeColor = System.Drawing.Color.Black;
+            this.redButton.ForeColor = System.Drawing.Color.White;
             this.redButton.Location = new System.Drawing.Point(252, 20);
             this.redButton.Margin = new System.Windows.Forms.Padding(10);
             this.redButton.Name = "redButton";

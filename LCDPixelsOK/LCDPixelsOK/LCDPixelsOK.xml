@@ -9,6 +9,13 @@
             Initializes a new instance of the <see cref="T:LCDPixelsOK.ControlPanelForm"/> class.
             </summary>
         </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            Closes the Settings form when the user presses the Escape key.
+            </summary>
+            <param name="keyData">One of the Keys values that represents the key to process.</param>
+            <returns>True if the key was processed by the control; otherwise, false.</returns>
+        </member>
         <member name="F:LCDPixelsOK.ControlPanelForm.components">
             <summary>
             Required designer variable.
