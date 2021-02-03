@@ -5,6 +5,7 @@
 namespace LCDPixelsOK
 {
     using System;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Windows.Forms;
 
@@ -13,21 +14,9 @@ namespace LCDPixelsOK
     /// </summary>
     public partial class MainForm : Form
     {
+        private const int MaxColorIndex = 5;
 
-        private static readonly Color[] Colors = { Color.Black, Color.White, Color.Red, Color.Lime, Color.Blue, Color.Orange };
-
-        private int colorIndex;
-
-        internal int ColorIndex
-        {
-            get => this.colorIndex;
-
-            set
-            {
-                this.colorIndex = value;
-                this.BackColor = Colors[this.colorIndex];
-            }
-        }
+        private AppSettings appSettings;
 
         private ControlPanelForm controlPanelForm;
 
@@ -38,13 +27,16 @@ namespace LCDPixelsOK
         {
             this.InitializeComponent();
             this.controlPanelForm = new ControlPanelForm();
+
+            this.appSettings = AppSettings.Load();
+            Debug.WriteLine(this.appSettings.CustomColor);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Bounds = SystemInformation.VirtualScreen;
-            //this.controlPanelForm.Show(this);
-            //this.controlPanelForm.Activate();
+
+            this.ColorIndex = this.appSettings.ColorIndex;
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -52,11 +44,60 @@ namespace LCDPixelsOK
             this.controlPanelForm.Show(this);
         }
 
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (e.KeyCode == Keys.Escape)
+            switch (keyData)
             {
-                this.controlPanelForm.Visible = !this.controlPanelForm.Visible;
+                case Keys.Escape: this.controlPanelForm.Visible = !this.controlPanelForm.Visible; return true;
+                case Keys.Left: this.GotoPreviousColor(); return true;
+                case Keys.Right: this.GotoNextColor(); return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.appSettings.Save();
+        }
+
+        internal void GotoPreviousColor()
+        {
+            this.ColorIndex = this.ColorIndex > 0 ? this.ColorIndex - 1 : MaxColorIndex;
+        }
+
+        internal void GotoNextColor()
+        {
+            this.ColorIndex = this.ColorIndex < MaxColorIndex ? this.ColorIndex + 1 : 0;
+        }
+
+        internal int ColorIndex
+        {
+            get => this.appSettings.ColorIndex;
+
+            set
+            {
+                this.appSettings.ColorIndex = value;
+                this.BackColor = value switch
+                {
+                    0 => Color.Black,
+                    1 => Color.White,
+                    2 => Color.Red,
+                    3 => Color.Lime,
+                    4 => Color.Blue,
+                    5 => this.CustomColor,
+                };
+            }
+        }
+
+        internal Color CustomColor
+        {
+            get => Color.FromArgb(this.appSettings.CustomColor);
+
+            set
+            {
+                this.appSettings.CustomColor = value.ToArgb();
+                this.ColorIndex = 5;
             }
         }
     }

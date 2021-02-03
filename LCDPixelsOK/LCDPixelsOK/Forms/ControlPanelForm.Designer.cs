@@ -39,10 +39,11 @@ namespace LCDPixelsOK
             this.blueButton = new System.Windows.Forms.Button();
             this.customColorButton = new System.Windows.Forms.Button();
             this.statusBarTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.previousColorButton = new System.Windows.Forms.Button();
+            this.selectCustomColorButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.nextColorButton = new System.Windows.Forms.Button();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.mainTableLayoutPanel.SuspendLayout();
             this.colorButtonsFlowLayoutPanel.SuspendLayout();
             this.statusBarTableLayoutPanel.SuspendLayout();
@@ -210,10 +211,10 @@ namespace LCDPixelsOK
             this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.statusBarTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.statusBarTableLayoutPanel.Controls.Add(this.button2, 0, 0);
-            this.statusBarTableLayoutPanel.Controls.Add(this.button1, 2, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.previousColorButton, 0, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.selectCustomColorButton, 2, 0);
             this.statusBarTableLayoutPanel.Controls.Add(this.exitButton, 2, 0);
-            this.statusBarTableLayoutPanel.Controls.Add(this.button3, 1, 0);
+            this.statusBarTableLayoutPanel.Controls.Add(this.nextColorButton, 1, 0);
             this.statusBarTableLayoutPanel.Location = new System.Drawing.Point(0, 236);
             this.statusBarTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarTableLayoutPanel.Name = "statusBarTableLayoutPanel";
@@ -222,43 +223,45 @@ namespace LCDPixelsOK
             this.statusBarTableLayoutPanel.Size = new System.Drawing.Size(776, 60);
             this.statusBarTableLayoutPanel.TabIndex = 3;
             // 
-            // button2
+            // previousColorButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSize = true;
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.button2.Size = new System.Drawing.Size(194, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "🠈 Previous Color";
-            this.button2.UseVisualStyleBackColor = true;
+            this.previousColorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.previousColorButton.AutoSize = true;
+            this.previousColorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.previousColorButton.FlatAppearance.BorderSize = 0;
+            this.previousColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.previousColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousColorButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.previousColorButton.ForeColor = System.Drawing.Color.White;
+            this.previousColorButton.Location = new System.Drawing.Point(0, 0);
+            this.previousColorButton.Margin = new System.Windows.Forms.Padding(0);
+            this.previousColorButton.Name = "previousColorButton";
+            this.previousColorButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.previousColorButton.Size = new System.Drawing.Size(194, 60);
+            this.previousColorButton.TabIndex = 1;
+            this.previousColorButton.Text = "🠈 Previous Color";
+            this.previousColorButton.UseVisualStyleBackColor = true;
+            this.previousColorButton.Click += new System.EventHandler(this.PreviousColorButton_Click);
             // 
-            // button1
+            // selectCustomColorButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(388, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.button1.Size = new System.Drawing.Size(194, 60);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Custom Color...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.selectCustomColorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectCustomColorButton.AutoSize = true;
+            this.selectCustomColorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.selectCustomColorButton.FlatAppearance.BorderSize = 0;
+            this.selectCustomColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.selectCustomColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectCustomColorButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.selectCustomColorButton.ForeColor = System.Drawing.Color.White;
+            this.selectCustomColorButton.Location = new System.Drawing.Point(388, 0);
+            this.selectCustomColorButton.Margin = new System.Windows.Forms.Padding(0);
+            this.selectCustomColorButton.Name = "selectCustomColorButton";
+            this.selectCustomColorButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.selectCustomColorButton.Size = new System.Drawing.Size(194, 60);
+            this.selectCustomColorButton.TabIndex = 3;
+            this.selectCustomColorButton.Text = "Custom Color...";
+            this.selectCustomColorButton.UseVisualStyleBackColor = true;
+            this.selectCustomColorButton.Click += new System.EventHandler(this.SelectCustomColorButton_Click);
             // 
             // exitButton
             // 
@@ -280,24 +283,25 @@ namespace LCDPixelsOK
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button3
+            // nextColorButton
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.AutoSize = true;
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(194, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.button3.Size = new System.Drawing.Size(194, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "🠊 Next Color";
-            this.button3.UseVisualStyleBackColor = true;
+            this.nextColorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nextColorButton.AutoSize = true;
+            this.nextColorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nextColorButton.FlatAppearance.BorderSize = 0;
+            this.nextColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.nextColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextColorButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nextColorButton.ForeColor = System.Drawing.Color.White;
+            this.nextColorButton.Location = new System.Drawing.Point(194, 0);
+            this.nextColorButton.Margin = new System.Windows.Forms.Padding(0);
+            this.nextColorButton.Name = "nextColorButton";
+            this.nextColorButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.nextColorButton.Size = new System.Drawing.Size(194, 60);
+            this.nextColorButton.TabIndex = 2;
+            this.nextColorButton.Text = "🠊 Next Color";
+            this.nextColorButton.UseVisualStyleBackColor = true;
+            this.nextColorButton.Click += new System.EventHandler(this.nextColorButton_Click);
             // 
             // ControlPanelForm
             // 
@@ -308,14 +312,13 @@ namespace LCDPixelsOK
             this.ClientSize = new System.Drawing.Size(887, 369);
             this.Controls.Add(this.mainTableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ControlPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LCD PixelsOK";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlPanelForm_FormClosing);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlPanelForm_KeyDown);
+            this.Load += new System.EventHandler(this.ControlPanelForm_Load);
             this.mainTableLayoutPanel.ResumeLayout(false);
             this.mainTableLayoutPanel.PerformLayout();
             this.colorButtonsFlowLayoutPanel.ResumeLayout(false);
@@ -337,10 +340,11 @@ namespace LCDPixelsOK
         private System.Windows.Forms.Button greenButton;
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Button customColorButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button previousColorButton;
+        private System.Windows.Forms.Button nextColorButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.TableLayoutPanel statusBarTableLayoutPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button selectCustomColorButton;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }

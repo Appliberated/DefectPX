@@ -5,6 +5,8 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <Company>Appliberated</Company>
+    <Authors>Appliberated</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
