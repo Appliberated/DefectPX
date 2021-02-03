@@ -4,11 +4,6 @@
 
     public partial class ControlPanelForm : Form
     {
-        private MainForm MainForm
-        {
-            get => this.Owner as MainForm;
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="ControlPanelForm"/> class.
         /// </summary>
@@ -17,11 +12,22 @@
             this.InitializeComponent();
         }
 
+        private MainForm MainForm
+        {
+            get => this.Owner as MainForm;
+        }
+
+        /// <summary>
+        /// Closes the Settings form when the user presses the Escape key.
+        /// </summary>
+        /// <param name="keyData">One of the Keys values that represents the key to process.</param>
+        /// <returns>True if the key was processed by the control; otherwise, false.</returns>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
             {
-                case Keys.Escape: this.Hide(); return true;
+                // case Keys.Escape: this.Hide(); return true;
+                case Keys.Escape: this.Close(); return true;
                 case Keys.Left: this.MainForm.GotoPreviousColor(); return true;
                 case Keys.Right: this.MainForm.GotoNextColor(); return true;
             }
@@ -33,17 +39,6 @@
         {
             Application.Exit();
         }
-
-        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                e.Cancel = true;
-                this.Hide();
-            }
-        }
-
-
 
         private void ColorButtons_Click(object sender, System.EventArgs e)
         {
@@ -70,7 +65,7 @@
             this.MainForm.GotoPreviousColor();
         }
 
-        private void nextColorButton_Click(object sender, System.EventArgs e)
+        private void NextColorButton_Click(object sender, System.EventArgs e)
         {
             this.MainForm.GotoNextColor();
         }

@@ -18,7 +18,9 @@ namespace LCDPixelsOK
 
         private AppSettings appSettings;
 
-        private ControlPanelForm controlPanelForm;
+        private Point controlPanelLocation;
+
+        //private ControlPanelForm controlPanelForm;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainForm"/> class.
@@ -26,7 +28,7 @@ namespace LCDPixelsOK
         public MainForm()
         {
             this.InitializeComponent();
-            this.controlPanelForm = new ControlPanelForm();
+            // this.controlPanelForm = new ControlPanelForm();
 
             this.appSettings = AppSettings.Load();
             Debug.WriteLine(this.appSettings.CustomColor);
@@ -41,14 +43,17 @@ namespace LCDPixelsOK
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            this.controlPanelForm.Show(this);
+            this.ShowControlPanel();
+
+            // this.controlPanelForm.Show(this);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
             {
-                case Keys.Escape: this.controlPanelForm.Visible = !this.controlPanelForm.Visible; return true;
+                // case Keys.Escape: this.controlPanelForm.Visible = !this.controlPanelForm.Visible; return true;
+                case Keys.Escape: this.ShowControlPanel(); return true;
                 case Keys.Left: this.GotoPreviousColor(); return true;
                 case Keys.Right: this.GotoNextColor(); return true;
             }
@@ -59,6 +64,21 @@ namespace LCDPixelsOK
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.appSettings.Save();
+        }
+
+        private void ShowControlPanel()
+        {
+            using (ControlPanelForm controlPanelForm = new ControlPanelForm())
+            {
+                if (!this.controlPanelLocation.IsEmpty)
+                {
+                    controlPanelForm.StartPosition = FormStartPosition.Manual;
+                    controlPanelForm.Location = this.controlPanelLocation;
+                }
+
+                controlPanelForm.ShowDialog(this);
+                this.controlPanelLocation = controlPanelForm.Location;
+            }
         }
 
         internal void GotoPreviousColor()

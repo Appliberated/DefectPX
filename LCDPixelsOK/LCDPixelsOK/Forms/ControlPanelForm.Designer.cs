@@ -301,7 +301,7 @@ namespace LCDPixelsOK
             this.nextColorButton.TabIndex = 2;
             this.nextColorButton.Text = "🠊 Next Color";
             this.nextColorButton.UseVisualStyleBackColor = true;
-            this.nextColorButton.Click += new System.EventHandler(this.nextColorButton_Click);
+            this.nextColorButton.Click += new System.EventHandler(this.NextColorButton_Click);
             // 
             // ControlPanelForm
             // 
@@ -317,7 +317,6 @@ namespace LCDPixelsOK
             this.Name = "ControlPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LCD PixelsOK";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlPanelForm_FormClosing);
             this.Load += new System.EventHandler(this.ControlPanelForm_Load);
             this.mainTableLayoutPanel.ResumeLayout(false);
             this.mainTableLayoutPanel.PerformLayout();
