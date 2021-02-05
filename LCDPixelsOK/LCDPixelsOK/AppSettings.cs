@@ -6,6 +6,7 @@ namespace LCDPixelsOK
 {
     using System;
     using System.Diagnostics;
+    using System.Drawing;
     using System.IO;
     using System.Text.Json;
     using System.Windows.Forms;
@@ -18,12 +19,12 @@ namespace LCDPixelsOK
         /// <summary>
         /// Gets or sets the value of the color index setting.
         /// </summary>
-        public int ColorIndex { get; set; }
+        public int ColorIndex { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets the value of the custom color setting.
         /// </summary>
-        public int CustomColor { get; set; }
+        public int CustomColor { get; set; } = Color.Orange.ToArgb();
 
         /// <summary>
         /// Gets the default settings file. Handles portable and installable scenarios.
@@ -43,7 +44,7 @@ namespace LCDPixelsOK
                         Path.GetFileName(path));
                 }
 
-                System.Diagnostics.Debug.WriteLine(path);
+                Debug.WriteLine(path);
                 return path;
             }
         }
@@ -60,7 +61,9 @@ namespace LCDPixelsOK
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e);
+                LogError("Loading settings", e.Message);
+
+                // Return an AppSettings instace with default values
                 return new AppSettings();
             }
         }
@@ -76,7 +79,22 @@ namespace LCDPixelsOK
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e);
+                LogError("Saving settings", e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Logs an error message to the Windows Event Log.
+        /// </summary>
+        private static void LogError(string category, string message)
+        {
+            try
+            {
+                EventLog.WriteEntry("Application", $"{Application.ProductName}: {category}: {message}", EventLogEntryType.Error);
+            }
+            catch
+            {
+                // Ignore exceptions while writing to the Event Log
             }
         }
     }

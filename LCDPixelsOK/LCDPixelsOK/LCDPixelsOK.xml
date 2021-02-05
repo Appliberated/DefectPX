@@ -35,6 +35,11 @@
             Saves the app settings to the default settings file.
             </summary>
         </member>
+        <member name="M:LCDPixelsOK.AppSettings.LogError(System.String,System.String)">
+            <summary>
+            Logs an error message to the Windows Event Log.
+            </summary>
+        </member>
         <member name="T:LCDPixelsOK.ControlPanelForm">
             <summary>
             The Control Panel form class.
