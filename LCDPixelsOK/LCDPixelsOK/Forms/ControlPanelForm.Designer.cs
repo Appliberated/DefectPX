@@ -302,7 +302,7 @@ namespace LCDPixelsOK
             this.aboutButton.Name = "aboutButton";
             this.aboutButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.aboutButton.Size = new System.Drawing.Size(108, 60);
-            this.aboutButton.TabIndex = 5;
+            this.aboutButton.TabIndex = 4;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.AboutButton_Click);
@@ -322,7 +322,7 @@ namespace LCDPixelsOK
             this.exitButton.Name = "exitButton";
             this.exitButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.exitButton.Size = new System.Drawing.Size(110, 60);
-            this.exitButton.TabIndex = 4;
+            this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);

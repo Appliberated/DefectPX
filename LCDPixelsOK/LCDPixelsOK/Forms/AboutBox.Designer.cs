@@ -64,8 +64,9 @@ namespace LCDPixelsOK
             this.appNameLabel.ForeColor = System.Drawing.Color.White;
             this.appNameLabel.Location = new System.Drawing.Point(33, 30);
             this.appNameLabel.Name = "appNameLabel";
+            this.appNameLabel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.appNameLabel.Size = new System.Drawing.Size(96, 96);
-            this.appNameLabel.TabIndex = 1;
+            this.appNameLabel.TabIndex = 2;
             this.appNameLabel.Text = "LCD PixelsOK";
             this.appNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -77,7 +78,7 @@ namespace LCDPixelsOK
             this.versionLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(66, 15);
-            this.versionLabel.TabIndex = 2;
+            this.versionLabel.TabIndex = 3;
             this.versionLabel.Text = "Version {0}";
             // 
             // copyrightLabel
@@ -87,7 +88,7 @@ namespace LCDPixelsOK
             this.copyrightLabel.Location = new System.Drawing.Point(33, 161);
             this.copyrightLabel.Name = "copyrightLabel";
             this.copyrightLabel.Size = new System.Drawing.Size(149, 15);
-            this.copyrightLabel.TabIndex = 3;
+            this.copyrightLabel.TabIndex = 4;
             this.copyrightLabel.Text = "Copyright © Appliberated";
             // 
             // freeLabel
@@ -99,7 +100,7 @@ namespace LCDPixelsOK
             this.freeLabel.MaximumSize = new System.Drawing.Size(300, 0);
             this.freeLabel.Name = "freeLabel";
             this.freeLabel.Size = new System.Drawing.Size(298, 80);
-            this.freeLabel.TabIndex = 0;
+            this.freeLabel.TabIndex = 5;
             this.freeLabel.Text = "LCD PixelsOK is free and open-source. Donations are the only way to maintain the " +
     "application and support its future development.";
             // 
@@ -118,7 +119,7 @@ namespace LCDPixelsOK
             this.donateButton.Name = "donateButton";
             this.donateButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.donateButton.Size = new System.Drawing.Size(183, 60);
-            this.donateButton.TabIndex = 2;
+            this.donateButton.TabIndex = 0;
             this.donateButton.Text = "Make a donation";
             this.donateButton.UseVisualStyleBackColor = true;
             this.donateButton.Click += new System.EventHandler(this.DonateButton_Click);
@@ -139,7 +140,7 @@ namespace LCDPixelsOK
             this.actionsTableLayoutPanel.RowCount = 1;
             this.actionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.actionsTableLayoutPanel.Size = new System.Drawing.Size(366, 60);
-            this.actionsTableLayoutPanel.TabIndex = 3;
+            this.actionsTableLayoutPanel.TabIndex = 1;
             // 
             // helpButton
             // 
@@ -156,15 +157,15 @@ namespace LCDPixelsOK
             this.helpButton.Name = "helpButton";
             this.helpButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.helpButton.Size = new System.Drawing.Size(183, 60);
-            this.helpButton.TabIndex = 3;
+            this.helpButton.TabIndex = 1;
             this.helpButton.Text = "Help";
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // AboutBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(366, 446);

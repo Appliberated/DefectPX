@@ -21,8 +21,23 @@ namespace LCDPixelsOK
         public AboutBox()
         {
             this.InitializeComponent();
-
             this.versionLabel.Text = string.Format("Version {0}", Application.ProductVersion);
+        }
+
+        /// <summary>
+        /// Processes a dialog box key. Closes the About dialog box when Escape is pressed.
+        /// </summary>
+        /// <param name="keyData">The key to process.</param>
+        /// <returns>True if the keystroke was processed; false otherwise.</returns>
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+
+            return base.ProcessDialogKey(keyData);
         }
 
         /// <summary>

@@ -50,6 +50,13 @@
             Initializes a new instance of the <see cref="T:LCDPixelsOK.AboutBox"/> class.
             </summary>
         </member>
+        <member name="M:LCDPixelsOK.AboutBox.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            Processes a dialog box key. Closes the About dialog box when Escape is pressed.
+            </summary>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
         <member name="M:LCDPixelsOK.AboutBox.DonateButton_Click(System.Object,System.EventArgs)">
             <summary>
             Open the Donate url in the default browser when the user clicks the Donate button.
