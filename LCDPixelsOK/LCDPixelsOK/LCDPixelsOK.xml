@@ -40,6 +40,43 @@
             Logs an error message to the Windows Event Log.
             </summary>
         </member>
+        <member name="T:LCDPixelsOK.AboutBox">
+            <summary>
+            The About dialog box class.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.AboutBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LCDPixelsOK.AboutBox"/> class.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.AboutBox.DonateButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open the Donate url in the default browser when the user clicks the Donate button.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.AboutBox.HelpButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open the Help url in the default browser when the user clicks the Help button.
+            </summary>
+        </member>
+        <member name="F:LCDPixelsOK.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LCDPixelsOK.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:LCDPixelsOK.ControlPanelForm">
             <summary>
             The Control Panel form class.
@@ -81,6 +118,11 @@
         <member name="M:LCDPixelsOK.ControlPanelForm.SelectCustomColorButton_Click(System.Object,System.EventArgs)">
             <summary>
             Opens a Color dialog box to let the user select a custom color when the Custom Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.AboutButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows the About dialog box when the About button is pressed.
             </summary>
         </member>
         <member name="M:LCDPixelsOK.ControlPanelForm.ExitButton_Click(System.Object,System.EventArgs)">

@@ -105,6 +105,15 @@ namespace LCDPixelsOK
         }
 
         /// <summary>
+        /// Shows the About dialog box when the About button is pressed.
+        /// </summary>
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            using AboutBox aboutBox = new AboutBox();
+            aboutBox.ShowDialog(this);
+        }
+
+        /// <summary>
         /// Closes the form when the Exit button is pressed.
         /// </summary>
         private void ExitButton_Click(object sender, EventArgs e)
