@@ -6,23 +6,28 @@ namespace LCDPixelsOK
 {
     using System;
     using System.Diagnostics;
-    using System.Drawing;
     using System.IO;
     using System.Text.Json;
     using System.Windows.Forms;
 
-    class AppSettings
+    /// <summary>
+    /// The App Settings class.
+    /// </summary>
+    internal class AppSettings
     {
-        //private AppSettings()
-        //{
-        //    this.ColorIndex = 0;
-        //    this.CustomColor = Color.Orange;
-        //}
-
+        /// <summary>
+        /// Gets or sets the value of the color index setting.
+        /// </summary>
         public int ColorIndex { get; set; }
 
+        /// <summary>
+        /// Gets or sets the value of the custom color setting.
+        /// </summary>
         public int CustomColor { get; set; }
 
+        /// <summary>
+        /// Gets the default settings file. Handles portable and installable scenarios.
+        /// </summary>
         private static string DefaultSettingsFilePath
         {
             get
@@ -43,6 +48,10 @@ namespace LCDPixelsOK
             }
         }
 
+        /// <summary>
+        /// Loads the app settings from the default settings file.
+        /// </summary>
+        /// <returns>An AppSettings instance with the loaded values.</returns>
         public static AppSettings Load()
         {
             try
@@ -56,6 +65,9 @@ namespace LCDPixelsOK
             }
         }
 
+        /// <summary>
+        /// Saves the app settings to the default settings file.
+        /// </summary>
         public void Save()
         {
             try

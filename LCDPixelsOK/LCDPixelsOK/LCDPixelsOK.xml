@@ -4,6 +4,42 @@
         <name>LCDPixelsOK</name>
     </assembly>
     <members>
+        <member name="T:LCDPixelsOK.AppSettings">
+            <summary>
+            The App Settings class.
+            </summary>
+        </member>
+        <member name="P:LCDPixelsOK.AppSettings.ColorIndex">
+            <summary>
+            Gets or sets the value of the color index setting.
+            </summary>
+        </member>
+        <member name="P:LCDPixelsOK.AppSettings.CustomColor">
+            <summary>
+            Gets or sets the value of the custom color setting.
+            </summary>
+        </member>
+        <member name="P:LCDPixelsOK.AppSettings.DefaultSettingsFilePath">
+            <summary>
+            Gets the default settings file. Handles portable and installable scenarios.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.AppSettings.Load">
+            <summary>
+            Loads the app settings from the default settings file.
+            </summary>
+            <returns>An AppSettings instance with the loaded values.</returns>
+        </member>
+        <member name="M:LCDPixelsOK.AppSettings.Save">
+            <summary>
+            Saves the app settings to the default settings file.
+            </summary>
+        </member>
+        <member name="T:LCDPixelsOK.ControlPanelForm">
+            <summary>
+            The Control Panel form class.
+            </summary>
+        </member>
         <member name="M:LCDPixelsOK.ControlPanelForm.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:LCDPixelsOK.ControlPanelForm"/> class.
@@ -11,10 +47,46 @@
         </member>
         <member name="M:LCDPixelsOK.ControlPanelForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
             <summary>
-            Closes the Settings form when the user presses the Escape key.
+            Processes a command key. Closes the form on Escape press, and cycles through colors on arrow keys press.
             </summary>
-            <param name="keyData">One of the Keys values that represents the key to process.</param>
-            <returns>True if the key was processed by the control; otherwise, false.</returns>
+            <param name="msg">The Win32 message to process.</param>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.ControlPanelForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Performs some initialization when the form is loaded.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.ColorButtons_Click(System.Object,System.EventArgs)">
+            <summary>
+            Changes the color index on the main form when one of the color buttons is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.PreviousColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cycles to the previous color when the Previous Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.NextColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cycles to the next color when the Next Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.SelectCustomColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens a Color dialog box to let the user select a custom color when the Custom Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.ExitButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Closes the form when the Exit button is pressed.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.ControlPanelForm.UpdateCustomColor(System.Drawing.Color)">
+            <summary>
+            Updates the background and text color of the Custom Color button when the custom color changes.
+            </summary>
         </member>
         <member name="F:LCDPixelsOK.ControlPanelForm.components">
             <summary>
@@ -41,6 +113,59 @@
         <member name="M:LCDPixelsOK.MainForm.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:LCDPixelsOK.MainForm"/> class.
+            </summary>
+        </member>
+        <member name="P:LCDPixelsOK.MainForm.ColorIndex">
+            <summary>
+            Gets or sets the index of the current color.
+            </summary>
+        </member>
+        <member name="P:LCDPixelsOK.MainForm.CustomColor">
+            <summary>
+            Gets or sets the custom color.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.GotoPreviousColor">
+            <summary>
+            Goes to the previous color.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.GotoNextColor">
+            <summary>
+            Goes to the next color.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            Processes a command key. Closes the form on Escape press, and cycles through colors on arrow keys press.
+            </summary>
+            <param name="msg">The Win32 message to process.</param>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.MainForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Performs some initialization when the form is loaded.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.MainForm_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Show the Control Panel form when the main form is first shown.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.MainForm_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Cycle through colors on left-click. Show the Control Panel form on right-click.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.MainForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Save the app settings when the main form is closing.
+            </summary>
+        </member>
+        <member name="M:LCDPixelsOK.MainForm.ShowControlPanel">
+            <summary>
+            Shows the Control Panel form as a modal dialog box.
             </summary>
         </member>
         <member name="F:LCDPixelsOK.MainForm.components">

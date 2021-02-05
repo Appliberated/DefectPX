@@ -29,9 +29,8 @@ namespace LCDPixelsOK
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanelForm));
             this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tipLabel = new System.Windows.Forms.Label();
             this.colorButtonsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.blackButton = new System.Windows.Forms.Button();
             this.whiteButton = new System.Windows.Forms.Button();
@@ -57,7 +56,7 @@ namespace LCDPixelsOK
             this.mainTableLayoutPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.mainTableLayoutPanel.ColumnCount = 1;
             this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainTableLayoutPanel.Controls.Add(this.label1, 0, 0);
+            this.mainTableLayoutPanel.Controls.Add(this.tipLabel, 0, 0);
             this.mainTableLayoutPanel.Controls.Add(this.colorButtonsFlowLayoutPanel, 0, 1);
             this.mainTableLayoutPanel.Controls.Add(this.statusBarTableLayoutPanel, 0, 2);
             this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
@@ -70,18 +69,20 @@ namespace LCDPixelsOK
             this.mainTableLayoutPanel.Size = new System.Drawing.Size(776, 296);
             this.mainTableLayoutPanel.TabIndex = 1;
             // 
-            // label1
+            // tipLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(31, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.label1.MaximumSize = new System.Drawing.Size(716, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(713, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.tipLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tipLabel.AutoSize = true;
+            this.tipLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tipLabel.Location = new System.Drawing.Point(49, 20);
+            this.tipLabel.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.tipLabel.MaximumSize = new System.Drawing.Size(716, 0);
+            this.tipLabel.Name = "tipLabel";
+            this.tipLabel.Size = new System.Drawing.Size(678, 40);
+            this.tipLabel.TabIndex = 0;
+            this.tipLabel.Text = "Press Escape to close this dialog box and cycle through colors to check for dead " +
+    "or stuck pixels. Press Escape again, or right-click to show this dialog box agai" +
+    "n.";
             // 
             // colorButtonsFlowLayoutPanel
             // 
@@ -305,8 +306,8 @@ namespace LCDPixelsOK
             // 
             // ControlPanelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(887, 369);
@@ -331,7 +332,7 @@ namespace LCDPixelsOK
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tipLabel;
         private System.Windows.Forms.FlowLayoutPanel colorButtonsFlowLayoutPanel;
         private System.Windows.Forms.Button blackButton;
         private System.Windows.Forms.Button whiteButton;
