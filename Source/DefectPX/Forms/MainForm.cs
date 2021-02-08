@@ -5,7 +5,6 @@
 namespace DefectPX
 {
     using System;
-    using System.Diagnostics;
     using System.Drawing;
     using System.Windows.Forms;
 
@@ -27,8 +26,11 @@ namespace DefectPX
         {
             this.InitializeComponent();
 
+            // Load app settings
             this.appSettings = AppSettings.Load();
-            Debug.WriteLine(this.appSettings.CustomColor);
+
+            // Set the form icon
+            this.Icon = Properties.Resources.AppIcon;
         }
 
         // -----------------------------------------------------------------------------------------
