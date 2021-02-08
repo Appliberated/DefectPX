@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\HDevelop\Appliberated\New.Developing\DefectPX\Windows\NET5\Source\Repo\DefectPX\DefectPX\DefectPX.xml</DocumentationFile>
+    <DocumentationFile>D:\HDevelop\Appliberated\New.Developing\DefectPX\Windows\NET5\Source\Repo\Source\DefectPX\DefectPX.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
