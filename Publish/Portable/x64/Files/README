@@ -1,0 +1,29 @@
+DefectPX
+Copyright © Appliberated
+https://www.appliberated.com/defectpx/
+
+
+What is DefectPX
+----------------
+
+DefectPX allows you to easily check for dead or defective pixels on LCD monitors. Useful to test monitors before purchasing, or during the warranty period. DefectPX comes with multi-monitor support, and a very intuitive interface.
+
+
+How to use the portable version
+-------------------------------
+
+1. Unzip all the files into a directory of your choosing, such as "C:\users\{username}\AppData\Local\Programs\DefectPX", or "C:\Portable\DefectPX". Just make sure you DON'T use a directory that requires Administrator privileges (such as a subdirectory under "Program Files").
+   
+2. Launch "DefectPX.exe".
+
+
+Free & Open-Source
+------------------
+
+DefectPX is free and open-source, and licensed under the MIT License.
+
+Donations are the only way to maintain the application and support its future development.
+
+Please visit the app home page at
+https://www.appliberated.com/defectpx/
+to help and contribute.
