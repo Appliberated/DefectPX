@@ -1,5 +1,5 @@
 ﻿
-namespace LCDPixelsOK
+namespace DefectPX
 {
     partial class MainForm
     {
@@ -42,7 +42,7 @@ namespace LCDPixelsOK
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "LCD PixelsOK";
+            this.Text = "DefectPX";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);

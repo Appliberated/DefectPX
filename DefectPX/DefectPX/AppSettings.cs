@@ -2,7 +2,7 @@
 // Copyright © Appliberated. All rights reserved.
 // </copyright>
 
-namespace LCDPixelsOK
+namespace DefectPX
 {
     using System;
     using System.Diagnostics;

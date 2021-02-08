@@ -1,5 +1,5 @@
 ﻿
-namespace LCDPixelsOK
+namespace DefectPX
 {
     partial class AboutBox
     {
@@ -67,7 +67,7 @@ namespace LCDPixelsOK
             this.appNameLabel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.appNameLabel.Size = new System.Drawing.Size(96, 96);
             this.appNameLabel.TabIndex = 2;
-            this.appNameLabel.Text = "LCD PixelsOK";
+            this.appNameLabel.Text = "DefectPX";
             this.appNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // versionLabel
@@ -101,8 +101,8 @@ namespace LCDPixelsOK
             this.freeLabel.Name = "freeLabel";
             this.freeLabel.Size = new System.Drawing.Size(298, 80);
             this.freeLabel.TabIndex = 5;
-            this.freeLabel.Text = "LCD PixelsOK is free and open-source. Donations are the only way to maintain the " +
-    "application and support its future development.";
+            this.freeLabel.Text = "DefectPX is free and open-source. Donations are the only way to maintain the appl" +
+    "ication and support its future development.";
             // 
             // donateButton
             // 
@@ -177,7 +177,7 @@ namespace LCDPixelsOK
             this.Name = "AboutBox";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About LCD PixelsOK";
+            this.Text = "About DefectPX";
             this.infoFlowLayoutPanel.ResumeLayout(false);
             this.infoFlowLayoutPanel.PerformLayout();
             this.actionsTableLayoutPanel.ResumeLayout(false);

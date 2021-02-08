@@ -1,5 +1,5 @@
 ﻿
-namespace LCDPixelsOK
+namespace DefectPX
 {
     partial class ControlPanelForm
     {
@@ -341,7 +341,7 @@ namespace LCDPixelsOK
             this.Name = "ControlPanelForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LCD PixelsOK";
+            this.Text = "DefectPX";
             this.Load += new System.EventHandler(this.ControlPanelForm_Load);
             this.mainTableLayoutPanel.ResumeLayout(false);
             this.mainTableLayoutPanel.PerformLayout();

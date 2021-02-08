@@ -2,7 +2,7 @@
 // Copyright © Appliberated. All rights reserved.
 // </copyright>
 
-namespace LCDPixelsOK
+namespace DefectPX
 {
     using System.Diagnostics;
     using System.Windows.Forms;
@@ -12,8 +12,8 @@ namespace LCDPixelsOK
     /// </summary>
     public partial class AboutBox : Form
     {
-        private const string DonateUrl = "http://www.appliberated.com/lcdpixelsok/donate/";
-        private const string HelpUrl = "http://www.appliberated.com/lcdpixelsok/";
+        private const string DonateUrl = "http://www.appliberated.com/defectpx/donate/";
+        private const string HelpUrl = "http://www.appliberated.com/defectpx/";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AboutBox"/> class.

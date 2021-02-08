@@ -7,15 +7,15 @@
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
     <Company>Appliberated</Company>
     <Authors>Appliberated</Authors>
-    <Product>LCD PixelsOK</Product>
-    <FileVersion>2.0.0.4</FileVersion>
+    <Product>DefectPX</Product>
+    <FileVersion>2.0.0.5</FileVersion>
     <Version>2.0.0</Version>
     <Copyright>Copyright © Appliberated. All rights reserved.</Copyright>
-    <AssemblyVersion>2.0.0.4</AssemblyVersion>
+    <AssemblyVersion>2.0.0.5</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\HDevelop\Appliberated\New.Developing\LCD PixelsOK\Windows\NET5\Source\Repo\LCDPixelsOK\LCDPixelsOK\LCDPixelsOK.xml</DocumentationFile>
+    <DocumentationFile>D:\HDevelop\Appliberated\New.Developing\DefectPX\Windows\NET5\Source\Repo\DefectPX\DefectPX\DefectPX.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
