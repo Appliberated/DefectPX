@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DefectPX</name>
+    </assembly>
+    <members>
+        <member name="T:DefectPX.AppSettings">
+            <summary>
+            The App Settings class.
+            </summary>
+        </member>
+        <member name="P:DefectPX.AppSettings.ColorIndex">
+            <summary>
+            Gets or sets the value of the color index setting.
+            </summary>
+        </member>
+        <member name="P:DefectPX.AppSettings.CustomColor">
+            <summary>
+            Gets or sets the value of the custom color setting.
+            </summary>
+        </member>
+        <member name="P:DefectPX.AppSettings.DefaultSettingsFilePath">
+            <summary>
+            Gets the default settings file. Handles portable and installable scenarios.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AppSettings.Load">
+            <summary>
+            Loads the app settings from the default settings file.
+            </summary>
+            <returns>An AppSettings instance with the loaded values.</returns>
+        </member>
+        <member name="M:DefectPX.AppSettings.Save">
+            <summary>
+            Saves the app settings to the default settings file.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AppSettings.LogError(System.String,System.String)">
+            <summary>
+            Logs an error message to the Windows Event Log.
+            </summary>
+        </member>
+        <member name="T:DefectPX.AboutBox">
+            <summary>
+            The About dialog box class.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AboutBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DefectPX.AboutBox"/> class.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AboutBox.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            Processes a dialog box key. Closes the About dialog box when Escape is pressed.
+            </summary>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
+        <member name="M:DefectPX.AboutBox.DonateButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open the Donate url in the default browser when the user clicks the Donate button.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AboutBox.HelpButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open the Help url in the default browser when the user clicks the Help button.
+            </summary>
+        </member>
+        <member name="F:DefectPX.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DefectPX.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DefectPX.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DefectPX.ControlPanelForm">
+            <summary>
+            The Control Panel form class.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DefectPX.ControlPanelForm"/> class.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            Processes a command key. Closes the form on Escape press, and cycles through colors on arrow keys press.
+            </summary>
+            <param name="msg">The Win32 message to process.</param>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.ControlPanelForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Performs some initialization when the form is loaded.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.ColorButtons_Click(System.Object,System.EventArgs)">
+            <summary>
+            Changes the color index on the main form when one of the color buttons is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.PreviousColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cycles to the previous color when the Previous Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.NextColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cycles to the next color when the Next Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.SelectCustomColorButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens a Color dialog box to let the user select a custom color when the Custom Color button is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.AboutButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows the About dialog box when the About button is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.ExitButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Closes the form when the Exit button is pressed.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.UpdateCustomColor(System.Drawing.Color)">
+            <summary>
+            Updates the background and text color of the Custom Color button when the custom color changes.
+            </summary>
+        </member>
+        <member name="F:DefectPX.ControlPanelForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DefectPX.ControlPanelForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DefectPX.MainForm">
+            <summary>
+            The main form of the application.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DefectPX.MainForm"/> class.
+            </summary>
+        </member>
+        <member name="P:DefectPX.MainForm.ColorIndex">
+            <summary>
+            Gets or sets the index of the current color.
+            </summary>
+        </member>
+        <member name="P:DefectPX.MainForm.CustomColor">
+            <summary>
+            Gets or sets the custom color.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.GotoPreviousColor">
+            <summary>
+            Goes to the previous color.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.GotoNextColor">
+            <summary>
+            Goes to the next color.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            Processes a command key. Closes the form on Escape press, and cycles through colors on arrow keys press.
+            </summary>
+            <param name="msg">The Win32 message to process.</param>
+            <param name="keyData">The key to process.</param>
+            <returns>True if the keystroke was processed; false otherwise.</returns>
+        </member>
+        <member name="M:DefectPX.MainForm.MainForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Performs some initialization when the form is loaded.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.MainForm_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Show the Control Panel form when the main form is first shown.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.MainForm_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Cycle through colors on left-click. Show the Control Panel form on right-click.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.MainForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Save the app settings when the main form is closing.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.ShowControlPanel">
+            <summary>
+            Shows the Control Panel form as a modal dialog box.
+            </summary>
+        </member>
+        <member name="F:DefectPX.MainForm.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DefectPX.MainForm.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DefectPX.MainForm.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DefectPX.Program">
+            <summary>
+            The main program class of the application.
+            </summary>
+        </member>
+        <member name="M:DefectPX.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>
