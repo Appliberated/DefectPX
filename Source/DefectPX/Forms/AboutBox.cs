@@ -12,8 +12,8 @@ namespace DefectPX
     /// </summary>
     public partial class AboutBox : Form
     {
-        private const string DonateUrl = "http://www.appliberated.com/defectpx/donate/";
-        private const string HelpUrl = "http://www.appliberated.com/defectpx/";
+        private const string DonateUrl = "https://www.appliberated.com/defectpx/contribute/";
+        private const string HelpUrl = "https://www.appliberated.com/defectpx/help/";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AboutBox"/> class.
