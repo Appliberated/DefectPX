@@ -5,6 +5,12 @@ Just change a few colors and test. Test monitors before purchasing. Test screens
 
 DefectPX comes with both mouse and keyboard shortcuts, multi-monitor support, and a very intuitive interface. Free and open-source, portable, no installation required!
 
+![GitHub](https://img.shields.io/github/license/appliberated/defectpx)
+![Downloads from GitHub Releases](https://img.shields.io/github/downloads/appliberated/defectpx/total)
+[![Generic badge](https://img.shields.io/badge/%20with%20❤%20from-Oradea,%20Romania-007AC7.svg)](https://shields.io/)
+
+## Screenshot
+
 ![DefectPX Screenshot](Assets/Repo/defectpx-screenshot-blue.png)
 
 ## Quotes
