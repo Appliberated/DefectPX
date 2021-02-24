@@ -7,7 +7,7 @@ DefectPX comes with both mouse and keyboard shortcuts, multi-monitor support, an
 
 ![GitHub](https://img.shields.io/github/license/appliberated/defectpx)
 ![Downloads from GitHub Releases](https://img.shields.io/github/downloads/appliberated/defectpx/total)
-[![Generic badge](https://img.shields.io/badge/%20with%20❤%20from-Oradea,%20Romania-007AC7.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made%20with%20❤%20in-Oradea,%20Romania-007AC7.svg)](https://shields.io/)
 
 ## Screenshot
 
