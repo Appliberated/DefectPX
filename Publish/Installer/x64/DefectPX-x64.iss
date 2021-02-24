@@ -15,7 +15,7 @@ DisableWelcomePage=no
 LicenseFile=Files\LICENSE
 Compression=lzma2
 SolidCompression=yes
-OutputBaseFilename=defectpx-installer-x64
+OutputBaseFilename=defectpx-installer-win64
 ; Setup cannot run on anything but x64.
 ArchitecturesAllowed=x64
 ; On x64 use the native 64-bit Program Files directory and the 64-bit view of the registry.

@@ -15,7 +15,7 @@ DisableWelcomePage=no
 LicenseFile=Files\LICENSE
 Compression=lzma2
 SolidCompression=yes
-OutputBaseFilename=defectpx-installer-x86
+OutputBaseFilename=defectpx-installer-win32
 
 [Files]
 Source: "Files\DefectPX.exe"; DestDir: "{app}"
