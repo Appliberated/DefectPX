@@ -15,9 +15,11 @@ DefectPX comes with both mouse and keyboard shortcuts, multi-monitor support, an
 
 ## Quotes
 
-> "This small tool is completely portable and does not require any installation, so just run the program; optionally you can also download the installer which lets you install this program like any other software." (Technix Update)
+> "DefectPX permits straightforward dead, defective, or stuck pixel detection. … The interface is simple and intuitive, making it of use to any user who wants to ensure their LCD monitor is up to snuff." (MajorGeeks)
 
-> "One of the diseases of LCD monitors is the pixel defect, which can be easily filtered out with this small program." (Prim hírek)
+> "Save both money and time by taking advantage of this lightweight application capable to detect dead or stuck pixels on LCD monitors" (Softpedia)
+
+> "This small tool is completely portable and does not require any installation, so just run the program; optionally you can also download the installer which lets you install this program like any other software." (Technix Update)
 
 [More Reviews](https://www.appliberated.com/defectpx/reviews/)
 
